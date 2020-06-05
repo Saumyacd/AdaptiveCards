@@ -595,7 +595,6 @@ export abstract class SingleInputPropertyEditor extends PropertySheetEntry {
         let columnSet = new Adaptive.ColumnSet();
 
         columnSet.spacing = Adaptive.Spacing.Small;
-
         columnSet.addColumn(leftColumn);
         columnSet.addColumn(rightColumn);
 
@@ -1529,7 +1528,7 @@ export class AdaptiveCardPeer extends TypedCardElementPeer<Adaptive.AdaptiveCard
 
                                 this.addAction(action);
 
-                                popupMenu.closePopup();
+                                popupMenu.closePopup(true);
                             };
 
                             popupMenu.items.add(menuItem);
@@ -1564,7 +1563,8 @@ export class AdaptiveCardPeer extends TypedCardElementPeer<Adaptive.AdaptiveCard
             defaultCategory,
             AdaptiveCardPeer.langProperty,
             AdaptiveCardPeer.fallbackTextProperty,
-            AdaptiveCardPeer.speakProperty);
+            //AdaptiveCardPeer.speakProperty
+            );
 
         propertySheet.add(
             PropertySheetCategory.LayoutCategory,
@@ -1859,7 +1859,7 @@ export class ActionSetPeer extends TypedCardElementPeer<Adaptive.AdaptiveCard> {
 
                                 this.addAction(action);
 
-                                popupMenu.closePopup();
+                                popupMenu.closePopup(true);
                             };
 
                             popupMenu.items.add(menuItem);

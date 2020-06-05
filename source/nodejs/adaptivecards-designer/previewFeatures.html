@@ -27,7 +27,9 @@
 				console.log("Local storage is not available.");
 			}
 
-			let designer = new ACDesigner.CardDesigner(ACDesigner.defaultMicrosoftHosts);
+			let hostContainers = [];
+			let designer = new ACDesigner.CardDesigner(hostContainers);
+			designer.sampleCatalogueUrl = "http://adaptivecards.io/designer/sample-catalogue.json";
 			require.config({
 				paths: {
 					'vs': 'https://unpkg.com/monaco-editor@0.17.1/min/vs'

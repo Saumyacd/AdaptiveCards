@@ -17,7 +17,7 @@ export class Versions {
     static readonly vNext = new Adaptive.Version(1000, 0, "vNext");
 }
 
-export var SupportedTargetVersions: Adaptive.Version[] = [ Versions.v1_0, Versions.v1_1, Versions.v1_2, Versions.vNext ];
+export var SupportedTargetVersions: Adaptive.Version[] = [ Versions.v1_0, Versions.v1_1, Versions.v1_2 ];
 
 export function isVersionLessOrEqual(version: TargetVersion, targetVersion: TargetVersion): boolean {
     if (version instanceof Adaptive.Version) {
